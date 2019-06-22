@@ -1,6 +1,7 @@
 import React from 'react';
-import './App.css';
+import './styles/App.css';
 import { TabBar } from 'antd-mobile';
+import "./styles/iconfont.css"
 
 class TabBarExample extends React.Component {
   constructor(props) {
@@ -47,18 +48,8 @@ class TabBarExample extends React.Component {
           <TabBar.Item
             title="首页"
             key="Home"
-            icon={<div style={{
-              width: '22px',
-              height: '22px',
-              background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat' }}
-            />
-            }
-            selectedIcon={<div style={{
-              width: '22px',
-              height: '22px',
-              background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat' }}
-            />
-            }
+            icon={ <span className='iconfont icon-home'/> }
+            selectedIcon={ <span className='iconfont icon-home'/> }
             selected={this.state.selectedTab === 'blueTab'}
             badge={1}
             onPress={() => {
@@ -68,26 +59,14 @@ class TabBarExample extends React.Component {
             }}
             data-seed="logId"
           >
-            {this.renderContent('Life')}
+            1
           </TabBar.Item>
           <TabBar.Item
-            icon={
-              <div style={{
-                width: '22px',
-                height: '22px',
-                background: 'url(https://gw.alipayobjects.com/zos/rmsportal/BTSsmHkPsQSPTktcXyTV.svg) center center /  21px 21px no-repeat' }}
-              />
-            }
-            selectedIcon={
-              <div style={{
-                width: '22px',
-                height: '22px',
-                background: 'url(https://gw.alipayobjects.com/zos/rmsportal/ekLecvKBnRazVLXbWOnE.svg) center center /  21px 21px no-repeat' }}
-              />
-            }
+            icon={ <span className='iconfont icon-gouwuche'/> }
+            selectedIcon={ <span className='iconfont icon-gouwuche'/> }
             title="购物车"
             key="Cart"
-            badge={'new'}
+            badge={1}
             selected={this.state.selectedTab === 'redTab'}
             onPress={() => {
               this.setState({
@@ -96,23 +75,11 @@ class TabBarExample extends React.Component {
             }}
             data-seed="logId1"
           >
-            {this.renderContent('Koubei')}
+            2
           </TabBar.Item>
           <TabBar.Item
-            icon={
-              <div style={{
-                width: '22px',
-                height: '22px',
-                background: 'url(https://zos.alipayobjects.com/rmsportal/psUFoAMjkCcjqtUCNPxB.svg) center center /  21px 21px no-repeat' }}
-              />
-            }
-            selectedIcon={
-              <div style={{
-                width: '22px',
-                height: '22px',
-                background: 'url(https://zos.alipayobjects.com/rmsportal/IIRLrXXrFAhXVdhMWgUI.svg) center center /  21px 21px no-repeat' }}
-              />
-            }
+            icon={ <span className='iconfont icon-weibiaoti2fuzhi12'/> }
+            selectedIcon={ <span className='iconfont icon-weibiaoti2fuzhi12'/> }
             title="我的"
             key="Mine"
             dot
@@ -123,7 +90,7 @@ class TabBarExample extends React.Component {
               });
             }}
           >
-            {this.renderContent('Friend')}
+            3
           </TabBar.Item>
         </TabBar>
       </div>
