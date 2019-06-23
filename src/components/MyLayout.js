@@ -5,37 +5,6 @@ import "../styles/iconfont.css"
 class MyLayout extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      selectedTab: 'redTab',
-      hidden:false,
-      fullScreen:false
-    };
-  }
-
-  renderContent(pageText) {
-    return (
-      <div style={{ backgroundColor: 'white', height: '100%', textAlign: 'center' }}>
-        <div style={{ paddingTop: 60 }}>Clicked “{pageText}” tab， show “{pageText}” information</div>
-        <a style={{ display: 'block', marginTop: 40, marginBottom: 20, color: '#108ee9' }}
-          onClick={(e) => {
-            e.preventDefault();
-            this.setState({
-            });
-          }}
-        >
-
-        </a>
-        <a style={{ display: 'block', marginBottom: 600, color: '#108ee9' }}
-          onClick={(e) => {
-            e.preventDefault();
-            this.setState({
-            });
-          }}
-        >
-
-        </a>
-      </div>
-    );
   }
 
   render() {
@@ -53,7 +22,6 @@ class MyLayout extends React.Component {
             selectedIcon={ <span className='iconfont icon-home'/> }
             selected={this.props.match.url==='/'}
             onPress={() => {this.props.history.push('/')}}
-            data-seed="logId"
           >
             {this.props.match.url==='/'?this.props.children:null}
           </TabBar.Item>
@@ -65,7 +33,6 @@ class MyLayout extends React.Component {
             badge={1}
             selected={this.props.match.url==='/Cart'}
             onPress={() => {this.props.history.push('/Cart')}}
-            data-seed="logId1"
           >
             {this.props.match.url==='/Cart'?this.props.children:null}
           </TabBar.Item>
