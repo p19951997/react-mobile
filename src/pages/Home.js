@@ -26,7 +26,9 @@ class Home extends Component {
             <Fragment>
                 {/* 轮播图开始 */}
                 <Carousel
+                    // 是否自动轮播
                     autoplay
+                    // 是否无限循环
                     infinite
                 >
                     {this.state.sliderlist.map(val => (
