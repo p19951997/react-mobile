@@ -10,12 +10,11 @@ class App extends Component {
     render() { 
         return ( 
             <Fragment>
-                {/* <Router>
-                    <Route path='/' exact component={Home} />
-                    <Route path='/Cart' component={Cart} />
-                    <Route path='/Mine' component={Mine} />
-                </Router> */}
-                <MyLayout  />
+                <Router>
+                    <Route path='/' exact render={(props)=><MyLayout  {...props}><Home /></MyLayout>} />
+                    <Route path='/Cart' render={(props)=><MyLayout  {...props}><Cart /></MyLayout>} />
+                    <Route path='/Mine' render={(props)=><MyLayout  {...props}><Mine /></MyLayout>} />
+                </Router>
             </Fragment>
          );
     }
